@@ -13,17 +13,25 @@ Plugin 'vim-syntastic/syntastic'                " A powerful syntax checker
 call vundle#end()                               " required
 filetype plugin indent on                       " required
 
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+" Vundle Settings / Help
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+    " :PluginList       - lists configured plugins
+    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+    " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" Syntastic Settings / Help
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
 set path+=**                                    " Provides tab-completion for all file-related tasks
 set wildmenu                                    " Display all matching files when we tab complete
 set number                                      " show line numbers
@@ -39,13 +47,3 @@ set clipboard=unnamed                           " access system clipboard
 set ruler                                       " show ruler
 syntax enable                                   " enable syntax highlighting
 let python_highlight_all = 1                    " enable all Python syntax highlighting features
-
-" Syntastic Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
