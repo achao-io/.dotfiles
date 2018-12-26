@@ -8,7 +8,6 @@ Plugin 'VundleVim/Vundle.vim'                   " required by Vundle
 Plugin 'w0rp/ale'                               " Asynchronous Lint Engine - this plugin allows you to lint while you type
 Plugin 'Valloric/YouCompleteMe'                 " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine
 Plugin 'airblade/vim-gitgutter'                 " Vim-gitgutter shows a git diff in the 'gutter' (sign column)
-Plugin 'vim-airline/vim-airline'                " Draw a nice statusline at the bottom of each window
 Plugin 'takac/vim-hardtime'                     " Fix your Vim bad habits!
 call vundle#end()                               " required
 filetype plugin indent on                       " required
