@@ -9,6 +9,7 @@ Plugin 'w0rp/ale'                               " Asynchronous Lint Engine - thi
 Plugin 'Valloric/YouCompleteMe'                 " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine
 Plugin 'airblade/vim-gitgutter'                 " Vim-gitgutter shows a git diff in the 'gutter' (sign column)
 Plugin 'takac/vim-hardtime'                     " Fix your Vim bad habits!
+Plugin 'vim-airline/vim-airline'                " Lean & mean status/tabline for vim that's light as air
 call vundle#end()                               " required
 filetype plugin indent on                       " required
 
@@ -26,8 +27,6 @@ set showcmd                                     " display keystrokes in statusli
 set backspace=indent,eol,start                  " make backspace work like in most other programs
 set clipboard=unnamed                           " access system clipboard
 set ruler                                       " show ruler
-set laststatus=2                                " show status line
-set statusline=%f                               " show status line
 syntax enable                                   " enable syntax highlighting
 let python_highlight_all = 1                    " enable all Python syntax highlighting features
 let g:hardtime_default_on = 1                   " run vim-hardtime in all buffers by default
