@@ -28,6 +28,7 @@ set showcmd                                     " display keystrokes in statusli
 set backspace=indent,eol,start                  " make backspace work like in most other programs
 set clipboard=unnamed                           " access system clipboard
 set ruler                                       " show ruler
+set t_Co=256                                    " Use all 256 colors
 syntax enable                                   " enable syntax highlighting
 let python_highlight_all = 1                    " enable all Python syntax highlighting features
 let g:hardtime_default_on = 1                   " run vim-hardtime in all buffers by default
