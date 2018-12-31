@@ -10,6 +10,7 @@ Plugin 'Valloric/YouCompleteMe'                 " YouCompleteMe is a fast, as-yo
 Plugin 'airblade/vim-gitgutter'                 " Vim-gitgutter shows a git diff in the 'gutter' (sign column)
 Plugin 'takac/vim-hardtime'                     " Fix your Vim bad habits!
 Plugin 'vim-airline/vim-airline'                " Lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline-themes'         " Vim-airline themes
 call vundle#end()                               " required
 filetype plugin indent on                       " required
 
