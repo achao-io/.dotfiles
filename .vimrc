@@ -16,9 +16,6 @@ filetype plugin indent on                       " required
 
 set path+=**                                    " Provides tab-completion for all file-related tasks
 set wildmenu                                    " Display all matching files when we tab complete
-set number                                      " show line numbers
-set relativenumber                              " use relative line numbers
-set ts=4                                        " set tabs to have 4 spaces
 set autoindent                                  " indent when moving to the next line while writing code
 set expandtab                                   " expand tabs into spaces
 set shiftwidth=4                                " when using the >> or << commands, shift lines by 4 spaces
@@ -29,6 +26,23 @@ set backspace=indent,eol,start                  " make backspace work like in mo
 set clipboard=unnamed                           " access system clipboard
 set ruler                                       " show ruler
 set t_Co=256                                    " Use all 256 colors
-syntax enable                                   " enable syntax highlighting
 let python_highlight_all = 1                    " enable all Python syntax highlighting features
 let g:hardtime_default_on = 0                   " run vim-hardtime in all buffers by default
+
+" https://medium.com/hackernoon/my-minimal-vimrc-config-c1a4d26553ca
+syntax enable
+set tabstop=2
+set number 
+
+" https://stackoverflow.com/questions/25136583/how-to-highlight-search-words-in-vim-permanently
+set hlsearch
+
+" https://stackoverflow.com/questions/25635413/vim-incremental-search
+set incsearch
+
+" https://jeffkreeftmeijer.com/vim-number/
+augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
